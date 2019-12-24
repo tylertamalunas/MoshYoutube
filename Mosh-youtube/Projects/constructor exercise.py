@@ -12,3 +12,6 @@ class Person:
 
 john = Person("John Smith")
 john.talk()
+
+bob = Person("Bob Smith")
+bob.talk()
