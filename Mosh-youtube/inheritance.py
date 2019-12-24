@@ -8,7 +8,9 @@ class Mammal:
 
 # just need to call the main class
 class Dog(Mammal):
-    pass
+    def bark(self):
+        print("bark")
+        # this is specific to Dog only
 
 
 # what if you want to define another class in the future?
@@ -20,7 +22,7 @@ class Cat(Mammal):
 
 dog1 = Dog()
 dog1.walk()
-
+dog1.bark()
 
 
 # multiple approaches to stop this, one of the approaches is inheritance.
