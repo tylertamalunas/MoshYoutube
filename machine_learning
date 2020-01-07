@@ -1,0 +1,17 @@
+Steps for machine learning
+1. Import the data.
+2. Clean the data.
+3. Split the data into training/test sets
+4. Create a model
+5. Train the model
+6. Make predictions
+7. Evaluate and Improve
+
+LIBRARIES
+Numpy - provides a multi-dimensional array
+Pandas - Data analysis library that provides data frame( similar to excel spreadsheet)
+MatPlotLib - 2D plotting library for creating graphs and plots
+Scikit-Learn - Provides common algorithms such as decision trees, and neural networks, etc.
+
+TOOLS
+Jupyter - used for writing code for machine learning. Makes it eay to inspect the data.
