@@ -1,0 +1,10 @@
+-Press 'H' to see the list of all keyboard shortcuts
+most useful ones
+-'b' inserts a new cell below the cell
+-'a' inserts a new cell above
+-'dd' deletes the cell
+-run only runs the current cell (shift + enter)
+-run all cells by going to cell>run all cells together
+-autocomplete by pressing tab and selecting with cursor
+-get more info on command by typing shift space
+-'ctrl + /' turns it into a comment
