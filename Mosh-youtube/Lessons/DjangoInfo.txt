@@ -1,0 +1,105 @@
+Django is a framework.
+A framework is a library of reusable modules.
+A framework defines a structure for applications.
+Django is used mostly for websites.
+Helps with http requests, url's, sessions,, cookies, etc.
+
+================================
+
+To start a django project, type:
+    django-admin startproject <name> <folder>
+    (use . for current folder)
+
+In an already started project, use manage.py instead of django-admin
+
+typing:
+    python3 manage.py runserver
+starts a development webserver
+this gives an address for the django webserver (http://127.0.0.1:8000/
+
+To make an app type:
+    python3 manage.py startapp <appname>
+    creates a new folder (python package)
+
+================================
+
+URL mapping
+    Need to have something pointing to the /products
+    create new file in app called urls.py
+
+================================
+
+Exercise:
+    modify it so that when navigating to products/new it will display some text such as "New products"
+    -need to create a new function in views.py the will return the Httpresponse()
+    -need to add a new urlpattern into products/urls that points to new/ and calls the new view function
+
+================================
+
+Models
+    need to go to the models.py in the app and create a class.
+        "class Product(models.Model)"
+    add any needed models like price, image, name, stock, etc.
+
+================================
+
+Migrations
+    To auto make a module, use the command:
+        python3 manage.py makemigrations
+        this will make a model and tell you where it is located.
+        it will automatically create things like product, price, stock, etc.
+    Running:
+        python3 manage.py migrate
+        compares the autocreated with the one we create and updates the db
+
+    When creating a new model, or modifying an existing one, go to the terminal, make a new migration and run it
+
+    exercise:
+        create new model class of "Offer"
+            -code (VCA2142)
+            -description (20% off all products)
+            -discount (0.2)
+        create migration and bring database up to date
+
+================================
+
+Admin
+    To create the first user:
+        python3 manage.py createsuperuser
+            -username
+            -email
+            -password
+    Can manage users and groups by default in the admin panel.
+    Can add more options in admin.py
+        admin.site.register(<name>)
+        this creates the new option, and adds fields for adding new products without having to do anything other than the
+        one line of code.
+
+    Customizing Admin
+        To provide more info in admin panel, need to open admin.py and add a class:
+            class ClassnameAdmin(admin.ModelAdmin):
+                list_display('items', 'to', 'show')
+         Then you need to add the ClassnameAdmin to the admin site register for the same classname.
+
+    exercise
+        [add 5-10 more products]
+        add ability to manage offers
+            -2 columns, code, discount
+
+================================
+
+Templates
+    Need to add a folder in the app that is called 'templates'
+        -In this folder you can add templates by adding a new file like 'index.html'
+        -the {% is a template tag, and we use it to execute logic (for loops, if statements)
+        -{{ is used to dynamically render values
+
+================================
+
+Adding Bootstrap
+    It is a framework.
+    Going to getbootstrap.com > Documentation > copy the starter template
+    Create html file in templates and paste it in there
+
+================================
+
